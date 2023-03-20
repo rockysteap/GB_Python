@@ -31,14 +31,14 @@ def print_poly(poly, x):
             if key == 1:
                 poly_string += f'{"-" if key == max_key else " - "}{x}'
             if key == 0:
-                poly_string += f'{"-" if key == max_key else " - "}'
+                poly_string += f'{"-" if key == max_key else " - "}{value}'
         elif value == 1:
             if key > 1:
                 poly_string += f'{"" if key == max_key else " + "}{x}^{key}'
             if key == 1:
                 poly_string += f'{"" if key == max_key else " + "}{x}'
             if key == 0:
-                poly_string += f'{"" if key == max_key else " + "}'
+                poly_string += f'{"" if key == max_key else " + "}{value}'
         elif value > 1:
             if key > 1:
                 poly_string += f'{"" if key == max_key else " + "}{value}{x}^{key}'
