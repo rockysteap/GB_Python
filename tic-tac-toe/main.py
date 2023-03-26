@@ -45,8 +45,7 @@ win_info_h = 11 * win_info_size
 root = Tk()
 root.title('КрестикИ x НоликИ')
 root.iconbitmap('./images/favicon.ico')
-# root.geometry("384x678+800+300")
-root.geometry("384x678+2500+250")
+root.geometry("384x678+800+300")
 root.resizable(width=False, height=False)
 
 
@@ -142,8 +141,8 @@ def mm_btn_year_func():
     messagebox.showinfo('Secret button',
                         'Congratulations!'
                         '\nYou\'ve found a secret button!\n'
+                        '\nThanks for playing!\n'
                         '\nIt was fun to try Tkinter library for the first time'
-                        '\nThis game was inspired by GeekBrains py course.'
                         '\nBest regards, ilia.')
 
 
