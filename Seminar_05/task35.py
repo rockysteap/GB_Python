@@ -24,6 +24,11 @@ def is_simple(num: int) -> bool:
 # print(is_simple(199))
 # print(is_simple(149))
 
+
+# Оптимальный вариант:
+# Отсекаем делители 1, 2 и 3, затем проверяем на четность
+# И далее проходим циклом от 3 до (корня из числа + 1)
+
 def simple(num: int) -> bool:
     if num in [1, 2, 3]:
         return True
