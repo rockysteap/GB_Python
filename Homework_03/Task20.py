@@ -29,3 +29,22 @@ elif scrabble.is_ru_alphabet(user_input):
     print(f'Слово \'{user_input}\' набрало {score} балла(ов).')
 else:
     print('Ошибка: некорректный ввод.')
+
+
+# Проверка алфавита с использованием ord():
+# ord() возвращает Unicode из заданного символа
+# (иными словами, принимает строку единичной длины в качестве аргумента
+# и возвращает эквивалентность Юникода переданного аргумента)
+# 65 - 122 -> unicodes английского алфавита от большой 'A' до маленькой 'z'
+# 1040 - 1103 -> unicodes русского алфавита 'А' -> 'я'
+
+en_total = scrabble.en_score(user_input)
+ru_total = scrabble.ru_score(user_input)
+word = user_input
+
+if all(list(map(lambda x: 64 < ord(x) < 123, word))):
+    print(f'Английское слово \'{word}\' весит {en_total} баллов.')
+elif all(list(map(lambda x: 1039 < ord(x) < 1104, word))):
+    print(f'Русское слово \'{word}\' весит {ru_total} баллов.')
+else:
+    print(f'Слово не соответствует ни английскому, ни русскому алфавиту.')
