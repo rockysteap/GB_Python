@@ -48,6 +48,7 @@ def test():
     get_var = value.get()
     lab["text"] = get_var
 
+
 lab = Label(text="Привет!")
 ent = Entry(textvariable=value)
 but = Button(command=test, text="OK")
