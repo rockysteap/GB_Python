@@ -1,6 +1,6 @@
 # GB_Python course 
 
-### /tic-tac-toe (Tic-Tac-Toe using Tkinter lib)
+### /tic-tac-toe (Tic-Tac-Toe game using Tkinter lib)
 
 ### PVP mode
 
