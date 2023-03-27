@@ -9,15 +9,18 @@ def is_simple(num: int) -> bool:
     for i in range(2, num):
         if num % i == 0:
             my_list.append(i)
+    print(my_list)
     if my_list:
         return False
     return True
 
 
-# start = time.time()
-# print(is_simple(1234165784123)) # остановил после двух суток)
-# finish = time.time()
-# print(finish - start)
+print(is_simple(220))
+print(is_simple(284))
+start = time.time()
+print(is_simple(1234165784123))  # остановил после двух суток
+finish = time.time()
+print(finish - start)
 
 
 # print(is_simple(777))
