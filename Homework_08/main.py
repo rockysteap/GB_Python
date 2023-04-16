@@ -443,7 +443,6 @@ def remove_contact(contact):
     if len([li for li in contact if li]) == 0 or not contact[0] or not contact[1]:
         return print('Empty request or minimum requirement are not met: last_name + first_name')
 
-    global book, duplicates
     initialize_book()
 
     # Parse contact attributes
@@ -466,7 +465,7 @@ def remove_contact(contact):
 
 def show_menu(state='1'):
     """ Active menu """
-    global last_file_opened, last_file_saved, menu_state
+    global menu_state
     menu_state = state
     menu = { '(M)ain menu': ['(F)ile', '(B)ook', 'E(x)it', '', ''],
              'File menu': ['(O)pen - read from file', '(S)ave - write to file'],
@@ -503,7 +502,6 @@ def show_menu(state='1'):
 
 def get_action(user_input):
     """ Menu states and actions """
-    global file_to_read, file_to_write, new_entry, menu_state, last_search, search_fields
     if menu_state == '1':
         # States for main menu
         # '1' -> Cases: E(X)it, (F)ile, (B)ook
@@ -571,7 +569,6 @@ def get_action(user_input):
 
 
 def main():
-    # global book, search_fields, search_results, duplicates, new_entry, file_to_read, file_to_write
     while True:
         get_action(input(' : '))
 
